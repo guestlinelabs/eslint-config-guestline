@@ -13,7 +13,23 @@ module.exports = {
     'padding-line-between-statements': [
       'error',
       // Always require blank lines before return statements
-      { blankLine: 'always', prev: '*', next: 'return' }
+      { blankLine: 'always', prev: '*', next: 'return' },
+      // Always require blank lines before and after every sequence of variable declarations and export
+      {
+        blankLine: 'always',
+        prev: '*',
+        next: ['const', 'let', 'var', 'export']
+      },
+      {
+        blankLine: 'always',
+        prev: ['const', 'let', 'var', 'export'],
+        next: '*'
+      },
+      {
+        blankLine: 'any',
+        prev: ['const', 'let', 'var', 'export'],
+        next: ['const', 'let', 'var', 'export']
+      }
     ]
   }
 };

@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-guestline",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "ESLint configuration used by Guestline",
   "repository": "guestlinelabs/scripts",
   "license": "MIT",
